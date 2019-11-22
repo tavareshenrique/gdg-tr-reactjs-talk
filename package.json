@@ -1,13 +1,18 @@
 {
-  "name": "gdg-react",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "private": true,
+  "name": "mdx-talk",
+  "version": "2.3.2",
   "scripts": {
-    "start": "mdx-deck deck.mdx"
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx && cp -r images dist/ ",
+    "help": "mdx-deck"
+  },
+  "devDependencies": {
+    "mdx-deck": "^2.3.2"
   },
   "dependencies": {
-    "mdx-deck": "^3.0.13",
-    "styled-components": "^4.4.1"
+    "prism-react-renderer": "^0.1.6",
+    "recharts": "^1.6.2",
+    "styled-components": "^4.2.0"
   }
 }
