@@ -353,290 +353,61 @@ Yahoo, Medium, Reddit, Printerest
 
 ---
 
-<Header>Start with markdown</Header>
+<Header>Salário</Header>
 
-```markdown
-# Developers writing open source
-
-More developers than ever are contributing to
-open source as a part of their jobs.
-```
+<Image src="/images/salario1.png" css={{ height: 400 }} />
 
 <Notes>
-To get started, you write this markdown.
+Esse aqui é a média de um desenvolvedor ReactJS que tem em um site
+É um site que os desenvolvedores informam quanto ganham, e o site tira a média.
+Não é nada mal heim?
 
-Your vision for the article isn't just text though. You want to include some visually appealing data, ideally shown in a chart or a graph. You know you can get some data from StackOverflow's excellent annual developer survey, and if you you happen to be a developer, you know how to make charts in JavaScript, or at least find a library that does.
+Mas garanto a vocês que pode chegar a muito mais que isso!
 
-But how do you get charts in markdown? There's no markdown syntax for making charts. This is where MDX comes in handy.
+Alguém que está começando, recebe no mínim uns 2.000 e pouco, que está começando mesmo.
+Mas tudo depende da empresa também, mas esse seria o correto.
 </Notes>
 
 ---
 
-<Header>Add some JSX</Header>
+<Split>
 
-```jsx
-import StackOverflowChart from "./components/StackOverflowChart"
+<Image src="/images/salario2.png" css={{ height: 720 }} />
 
-# Developers writing open source
-
-More developers than ever are contributing to
-open source as a part of their jobs.
-
-<StackOverflowChart />
-```
+</Split>
 
 <Notes>
-With MDX, we can import a component for our chart and embed it right in the markdown. That's what we're doing here with the StackOverflowChart JSX tag at the bottom.
 
-So, how could we build this StackOverflowChart component?
 </Notes>
 
 ---
 
-```jsx
-import { BarChart, Bar, ... } from 'recharts';
+<Header>O que pode ser feito com React?</Header>
 
-const data = [{ name: '2017', percent: 33 }, ...];
+<Image src="/images/slide.png" css={{ height: 400 }} />
 
-const StackOverflowChart = () => (
-  <BarChart width={800} height={300} data={data}>
-    <CartesianGrid stroke="#fff" />
-    <XAxis dataKey="name" />
-    <YAxis />
-    <Bar dataKey="percent" fill="#82ca9d" />
-  </BarChart>
-);
+---
 
-export default StackOverflowChart
-```
+<Header>Por onde começar?</Header>
+
+- Youtube;
+- Udemy;
+- Rocketseat;
 
 <Notes>
-First, we import some classes from the excellent Recharts charting library for React, which I will have chosen and added to my package.json. Then we set up the data, which are the percentages of developers who report to have contributed to open source in a given year according to the StackOverflow survey. Then we set up the chart using classes from Recharts.
+Existe bons canais no Youtube que dão uma boa introdução ao ReactJS de graça;
 
-Here's what it looks like when our MDX blog post is rendered.
+Também existe bons cursos na Udemy que ai já seria pago, mas não é nada absurdo, que vão te dar uma boa base;
+
+E pra mim uma das principais nesse ramo hoje em dia quando se trata de React, a Rocketseat.
+
+Link do Repo do Slide, Youtube e Rocketseat;
 </Notes>
 
 ---
 
-### Developers writing open source
-
-More developers than ever are contributing to open source as a part of their jobs.
-
-<StackOverflowChart />
+# Obrigado! 🙇‍♂️
 
 <Notes>
-Here it is. You can see the header and paragraph are from the markdown, as well as the rendered chart right after. Just imagine the formatting is a bit more blog post like, but you should get the idea.
-</Notes>
-
----
-
-<Image src="/images/mdx-deck.png" />
-
-*Warning: This presentation is written with MDX deck. All component renders are real.*
-
-<Notes>
-By the way, you're actually seeing this rendering happen for real right now. This presentation is written using mdx-deck, which makes it possible to build slide decks with MDX.
-
-So that last example is nice if we just need to make one chart, but what if we need several charts? Even better, what if we want to make it easy for anyone on the team to create charts of different types? That's easy enough with MDX, because we can pass properties to our components.
-</Notes>
-
----
-
-<Header>Reusable component</Header>
-
-```jsx
-import ColumnChart from "./components/ColumnChart"
-
-# Developers writing open source
-
-More developers than ever are contributing to
-open source as a part of their jobs.
-
-<ColumnChart xAxis={['2017', '2018', '2019']} 
-             yAxis={['33%', '56%', '65%']} />
-```
-
-<Notes>
-Here's our blog post again, but instead of StackOverflowChart we have ColumnChart, which takes two properties for the x and y-axis values. Now more ColumnCharts can be added to the blog post, each with different data. We could expose more props if we needed.
-
-Here we've lowered the level of abstraction to give some flexibility, but not too much.
-It's important that we don't make our MDX component interfaces too complex. 
-</Notes>
-
----
-
-> MDX components should have a level of abstraction that balances power and usability by authors.
-
-<Notes>
-Exposing too much complexity makes the MDX component hard to learn and remember how to use. Exposing too little may be limiting to the author, who could run into a wall and not have an escape hatch.
-
-I'll show one example to illustrate good MDX component design, involving design systems. Giving authors safe access to design systems is actually a pretty good use case for MDX.
-</Notes>
-
----
-
-“[MDX is] extremely useful for using design system components to render markdown and weaving interactive components in with existing markdown.”
-
-— @chrisbiscardi
-
-<Notes>
-This quote is from Chris Biscardi, who among other things maintains the MDX integration for Gatsby.
-
-// Read the quote
-</Notes>
-
----
-
-<Header>MDX for design systems</Header>
-
-```jsx
-# Developers writing open source
-
-More developers than ever are contributing to
-open source as a part of their jobs.
-
-<Panel color="primary">
-  <ColumnChart xAxis={['2017', '2018', '2019']} 
-               yAxis={['33', '56', '65']} />
-</Panel>
-```
-
-<Notes>
-This is the same example as before, but we're wrapping our ColumnChart in another MDX component called Panel. A Panel is a common component in design systems, and we could be using it here to visually make our chart stand out.
-
-As you can see, MDX allows you to nest and compose components, which is very useful. You'll notice there's no import statements anymore either, which isn't just to save space on the slide. MDX allows you to bind components to a global scope so they can be used without being imported - this is great for non-developer authors.
-
-Back to the design system idea and the Panel. How would we add a Panel without MDX?
-</Notes>
-
----
-
-```html
-<div class="panel has-background-primary">
-  <div class="panel-content">
-    Panel content goes here.
-  </div>
-</div>
-```
-
-Without MDX = verbose, tight coupling
-
-<Notes>
-Probably using just HTML, which has drawbacks. First, it's tightly coupled to the underlying HTML and CSS - if that changed, we'd have to change content files, which is annoying. Secondly, writing HTML manually requires knowledge of the design system, which isn't something that authors should be expected to have.
-
-How can we improve this?
-</Notes>
-
----
-
-```html
-<Panel color="primary">
-  Panel content goes here.
-</Panel>
-```
-
-With MDX = simpler & better encapsulated
-
-<Notes>
-This version with MDX is much cleaner. We can abstract away the actual markup and only accept properties that we want to the author to have control over.
-
-The author's experience is better too - there's less to write and less risk of making a mistake.
-
-To me, the opportunity to improve the authoring experience is why I'm so excited about MDX, but I'm not alone. John Otander, one of the creators of MDX, had the inspiration to create an "authorable format" for the JAMstack. He describes it this way:
-</Notes>
-
----
-
-"What I mean by **authorable** is that it's a format that can be naturally written in by all members of a cross-functional team after some learning - from engineering to marketing."
-
-— John Otander
-
-<Notes>
-I think this is a critical time for JAMstack developers to be thinking about cross-functional teams and authorability. For two reasons.
-</Notes>
-
----
-
-<Header>Why JAMstack authorability now?</Header>
-
-Visual storytelling & the New York Times
-
-<Notes>
-First, the content is getter more and more advanced. Think about the interactive visualizations and visual storytelling you see on publications likes the New York Times. That's the future. Authors will need a way to use and customize those things, they can't always be going to the developers.
-</Notes>
-
----
-
-<Header>Why JAMstack authorability now?</Header>
-
-For mass adoption, JAMstack needs to win over authors
-
-<Notes>
-Secondly, the JAMstack is not just a thing for developers anymore. It's a viable stack for replacing legacy tools and CMS. If its destiny is to overthrow legacy CMS, it needs to have the support of authors and stakeholders, as well as developers. Authors using tools like WordPress have a ton of experience and power at their fingertips - they can do a lot without having a call a developer. The same needs to be true for the JAMstack.
-</Notes>
-
----
-
-<Header>Authorable documentation</Header>
-
-Docs are complex
-
-<Notes>
-One place where it's easy to see the role of authorability today is in developer documentation. You heard from Sarah and Devin about the complexity of the Algolia documentation and the breadth of skills that exist in the team that supports it.
-
-If the author's experience is bad, like having to wait for really long builds, it has a real impact on how fast the team can move.
-</Notes>
-
----
-
-<Image src="/images/algolia-docs.png" />
-
-<Notes>
-As you can see from the Algolia example, developer documentation today is much more than just text and API references. There are widgets for things like language-specific code snippets, interactive code examples, navigation helpers, tool tips, and more. Good docs mix these elements wisely, to keep the docs feeling alive and providing the most value to the developers using them.
-
-Of course, not every team has the resources or need to solve the docs problem at Algolia scale, and for those projects and teams MDX can be a pretty good fit for docs. There are already some promising MDX-related projects in the docs space.
-</Notes>
-
----
-
-<Header>docz</Header>
-
-<Image src="/images/docz-screenshot.png" />
-
-<Notes>
-One is a popular open source project called docz, created by Pedro Nauck. docz describes itself as zero-config and pluggable, and it also has TypeScript support. Best of all, it comes with some built in MDX components like this one, which is an interactive code playground.
-</Notes>
-
----
-
-<Header>mdx-docs</Header>
-
-<Image src="/images/mdx-docs.png" />
-
-<Notes>
-Another project is called mdx-docs, created by Brent Jackson from Gatsby. It features live editing support via react-live, and is built on top of Next.js.
-</Notes>
-
----
-
-<Header>Links</Header>
-
-- mdxjs.com
-- mdx-deck.jxnblk.com
-- recharts.org
-- docz.site
-- mdx-docs.now.sh
-
-<Notes>
-I've talked about quite a few projects today, so here are a few links to check out. I will post my slides after the talk, which will contain links.
-
-So that's pretty much all I have to say. I hope you've gotten a good idea of what MDX is and what you can build with it. I hope I've also helped you think about the JAMstack authors out there, especially the ones who aren't developers, and the ways that you can empower them to make truly awesome stuff.
-</Notes>
-
----
-
-# Thank you! 🙇‍♂️
-
-<Notes>
-Last but not least, I want to again thank our organizers Nicolas and Matthieu and our hosts Algolia. I want to thank all of you for listening and being a fantastic audience. I'll be happy to answer questions if there are any. Thank you!
+É isso, muito obrigado a todos que estiveram presente, espero que tenha sido útil em alguma coisa, e até uma próxima!
 </Notes>
