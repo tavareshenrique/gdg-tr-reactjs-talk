@@ -1,4 +1,4 @@
-[![Iniciando com ReactJS](images/new_slide.png)](https://gdg-tr-talk-reactjs.netlify.com/)
+[![Iniciando com ReactJS](images/new_slide.png)](https://reactjs-gdg.henriquetavares.com/)
 
 # Iniciando com ReactJS
 
