@@ -12,4 +12,4 @@ Cosntruido com [MDX Deck](https://github.com/jxnblk/mdx-deck).
 - [John Otander](https://github.com/johno) e a equipe por trás do [MDX](https://github.com/mdx-js/mdx);
 - [Leonardo Procópio](https://github.com/leoeek) por me convidar para falar;
 - [Josh Dzielak](https://github.com/dzello) pelo template;
-- [Netlify](https://netlify.com/) para hospedar os slides;
+- [Netlify](https://netlify.com/) por hospedar os slides;
