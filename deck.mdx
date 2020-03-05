@@ -70,11 +70,11 @@ export const theme = {
 
 👨‍💻 Henrique Tavares<br/>
 
-06 de Dezembro de 2019<br/>
+11 de Março de 2020<br/>
 GDG Três Rios
 
 <Notes>
-Boa noite a todos, É um grande prazer estar aqui, queria agradecer ao Léo Procóprio e todos os organizadores do GDG de Três Rios por organizar o evento e me convidar para falar aqui hoje.
+Boa noite a todos, é um grande prazer estar aqui, queria agradecer ao Léo Procóprio e todos os organizadores do GDG de Três Rios por organizar o evento e me convidar para falar aqui hoje.
 
 Eu acho loucura, nem eu me chamaria, mas o Léo prometeu um chachê, então vamos lá!
 </Notes>
@@ -106,9 +106,9 @@ Trabalho com programação profissionalmente desde 2015.
 <Notes>
 Eu trabalho na Zaal desde 2015;
 
-Entrei na Zaal como programador delphi e atualmente sou desenvolvedor Front-End trabalhando com o próprio ReactJS;
+Atualmente desenvolvedor Front-End trabalhando com o próprio ReactJS;
 
-Eu trabalho com ReatJS há 1 ano direto basicamente e hoje eu vou falar um poquinho dele pra vocês;
+E hoje eu vou falar um poquinho dele pra vocês;
 </Notes>
 
 ---
@@ -131,14 +131,14 @@ No meu blog eu costumo postar algumas coisas que estou estudando e trabalhando.
 
 ---
 
-<Header>O que é o React?</Header>
+<Header>O que é o ReactJS?</Header>
 
 - Surgimento;
 - Biblioteca para a construção de interfaces;
 - React x ReactJS x React Native;
-- É utilizado para a construção de SPA;
-- O React é um Framework?
 - O React é uma linguagem de programação?
+- O React é um Framework?
+- É utilizado para a construção de SPA(Single Pages Applications);
 - JSX;
 
 <Notes>
@@ -146,11 +146,10 @@ No meu blog eu costumo postar algumas coisas que estou estudando e trabalhando.
 
 2º - O React é uma biblioteca feita em JavaScript para a construção de interfaces. Ex: Mobile, Web e até TV.
 
-3º - React é a biblioteca que é utilizada no ReactJS e React Native. ReactJS é o comportamento no React no Browser, na Web. React Native é o comportamento no React no mobile, no celular.
+3º - React é a biblioteca que é utilizada no ReactJS e React Native. ReactJS é o comportamento no React na Web. React Native é o comportamento no React no celular.
 
-4º - Single Pages Applications, antigamente, para você acessar rotas, você tinha que fazer uma req. no back-end e o back-end te retornava as rotas, com SPA não, o Front-End controla as rotas. É esse o conceito!
+6º - Carrega tudo de um só vez, separa o Back-End do Front-End; antigamente, para você acessar rotas, você tinha que fazer uma req. no back-end e o back-end te retornava as rotas, com SPA não, o Front-End controla as rotas. 
 
-6º - É uma mistura de JavaScript, HTML, CSS, Imagens etc. tudo em um só arquivo.
 
 </Notes>
 
@@ -182,68 +181,6 @@ Na próxima linha, a gente tá importando aqui, um arquivo css que vai fazer a e
 E mais abaixo, estamos importando uma imagem que será o icone d botão..
 
 E abaixo, a gente cria uma função que vai renderizar esse botão pra gente,e repare que dentro do return desa função, tem um código HTML.
-</Notes>
-
----
-
-<Header>Quais as vantagens de se utilizar ReactJS?</Header>
-
-- Reaproveitamento do Código;
-- Organização do Código;
-  - Componentização;
-
-<Notes>
-Uma das maiores vantagens do React, é a organização do código, ele te dar a liberdade para
-organizar o seu projeto do jeito que você quiser, tornando a organização muito pessoal.
-
-E também com isso, ele ajuda que o seu código se mantenha bem organizado.
-
-E é ai que entra a componentização.
-</Notes>
-
----
-
-<Image src="/images/react-comp.png" />
-
-<Notes>
-O que é a Componentização? Componentização é você poder se parar e reaproveitar todos os componentes que você desenvolve.
-</Notes>
-
----
-<Header>Quais as vantagens de se utilizar ReactJS?</Header>
-
-- Divisão de Responsabilidades;
-  - Back-end: Regra de Negócio;
-  - Front-end: Interface;
-- Reaproveitamento de Código;
-- Open-Source;
-- Comunidade;
-- Facebook;
-- Manipulação de estado;
-
-<Notes>
-1º - Back-End Calculo de Frete é o Back-End que faz, e pra mostrar quanto ficou essa frete, pra exibir na tela, é trabalho do ReactJS, o Front-End;
-
-2º - React Native, Componentização;
-
-3º - é Código Aberto, ou seja, todo o código do React é aberto, você mesmo, 
-pode acessar ele, ele fica disponível no Github, então se você quiser corrigir algum bug, erro ou até fazer uma melhoria, 
-você pode fazer e enviar para o pessoal que faz o controle do código para análisar e ver 
-se é viável entrar numa próxima versão. Facebook!
-</Notes>
-
----
-
-<Header> Quais as desvantagens?</Header>
-
-Não Tem!
-
-<Image src="https://media.giphy.com/media/3o7qDSOvfaCO9b3MlO/giphy.gif" css={{ height: 300 }} />
-
-
-<Notes>
-Então, não é que não tem, tudo tem vantagens e desvantagens, mas eu no consigo listar desvantagens do React.
-Ex.: Site Estático, opinião.
 </Notes>
 
 ---
@@ -281,17 +218,71 @@ Ele ajuda demais, e vocês entenderão o porque.
 <Header>Como Inicio um Projeto em ReactJS?</Header>
 
 ```js
-npm install -g create-react-app
-```
-
-```js
-npx create-react-app NAME
-
-yarn create react-app NAME
+npx create-react-app <NOME_PROJETO>
 ```
 
 <Notes>
 NPX é um executor de pacotes.
+</Notes>
+
+---
+
+
+<Header>Quais as vantagens de se utilizar ReactJS?</Header>
+
+- Reaproveitamento do Código;
+- Organização do Código;
+  - Componentização;
+
+<Notes>
+Uma das maiores vantagens do React, é a organização do código, ele te da a liberdade para
+organizar o seu projeto do jeito que você quiser, tornando a organização muito pessoal.
+
+Com isso, ele ajuda que o seu código se mantenha bem organizado.
+
+E é ai que entra a componentização.
+</Notes>
+
+---
+
+<Image src="/images/react-comp.png" />
+
+<Notes>
+O que é a Componentização? Componentização é você poder se parar e reaproveitar todos os componentes que você desenvolve.
+</Notes>
+
+---
+<Header>Quais as vantagens de se utilizar ReactJS?</Header>
+
+- Divisão de Responsabilidades;
+  - Back-end: Regra de Negócio;
+  - Front-end: Interface;
+- Open-Source;
+- Comunidade;
+- Facebook;
+- Manipulação de estado;
+
+<Notes>
+1º - Back-End Calculo de Frete é o Back-End que faz, e pra mostrar quanto ficou essa frete, pra exibir na tela, é trabalho do ReactJS, o Front-End;
+
+3º - é Código Aberto, ou seja, todo o código do React é aberto, você mesmo, 
+pode acessar ele, ele fica disponível no Github, então se você quiser corrigir algum bug, erro ou até fazer uma melhoria, 
+você pode fazer e enviar para o pessoal que faz o controle do código para análisar e ver 
+se é viável entrar numa próxima versão. Facebook!
+</Notes>
+
+---
+
+<Header> Quais as desvantagens?</Header>
+
+Não Tem!
+
+<Image src="https://media.giphy.com/media/3o7qDSOvfaCO9b3MlO/giphy.gif" css={{ height: 300 }} />
+
+
+<Notes>
+Então, não é que não tem, tudo tem vantagens e desvantagens, mas eu no consigo listar desvantagens do React.
+Ex.: Site Estático, opinião.
 </Notes>
 
 ---
