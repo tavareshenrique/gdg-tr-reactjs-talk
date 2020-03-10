@@ -42,10 +42,16 @@ Cosntruido com [MDX Deck](https://github.com/jxnblk/mdx-deck).
 
 - <https://rocketseat.com.br/week/inscricao/11.0>
 
+> Cod3r
+
+- <https://www.cod3r.com.br/courses/react-redux-fundamentos-e-2-apps-do-absoluto-zero>
+  - `-> CUPOM DE DESCONTO:` **GDGTRESRIOS2020** `(Válido até dia 13/03/2020)`
+
 ## Agradecimentos
 
 - [Brent Jackson](https://github.com/jxnblk) por criar o [mdx-deck](https://github.com/jxnblk/mdx-deck);
 - [John Otander](https://github.com/johno) e a equipe por trás do [MDX](https://github.com/mdx-js/mdx);
 - [Leonardo Procópio](https://github.com/leoeek) por me convidar para falar;
 - [Josh Dzielak](https://github.com/dzello) pelo template;
+- [Cod3r](https://www.cod3r.com.br/) por fornecer um cupom de desconto para o curso;
 - [Netlify](https://netlify.com/) por hospedar os slides;
